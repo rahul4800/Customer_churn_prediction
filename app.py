@@ -2,7 +2,7 @@
 
 
 import streamlit as st
-import pickle
+import joblib
 import pandas as pd
 
 # Page config
@@ -14,7 +14,7 @@ st.set_page_config(
 
 # Load model
 with open("churn_pred.pkl", "rb") as f:
-    model = pickle.load(f)
+    model = joblib.load(f)
 
 # Title
 st.title("📊 Customer Churn Prediction System")
